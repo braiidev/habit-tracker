@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+
+  <!-- Grid sutil de fondo -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Acento azul superior -->
+  <rect x="0" y="0" width="1200" height="4" fill="#2563eb"/>
+
+  <!-- Logo "h" -->
+  <rect x="60" y="60" width="72" height="72" rx="16" fill="#2563eb"/>
+  <text x="96" y="115" font-family="Georgia,serif" font-size="52" fill="white" text-anchor="middle">h</text>
+
+  <!-- Título -->
+  <text x="60" y="220" font-family="system-ui,sans-serif" font-size="64" font-weight="700" fill="white" letter-spacing="-2">Habit Tracker</text>
+
+  <!-- Subtítulo -->
+  <text x="60" y="278" font-family="system-ui,sans-serif" font-size="26" fill="#94a3b8">Seguimiento de hábitos diarios · Gratis · Sin anuncios</text>
+
+  <!-- Features pills -->
+  <rect x="60"  y="320" width="160" height="40" rx="20" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="140" y="345" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">📊 Estadísticas</text>
+
+  <rect x="236" y="320" width="130" height="40" rx="20" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="301" y="345" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">🔥 Rachas</text>
+
+  <rect x="382" y="320" width="130" height="40" rx="20" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="447" y="345" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">📅 Heatmap</text>
+
+  <rect x="528" y="320" width="180" height="40" rx="20" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="345" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">☁️ Multi-device</text>
+
+  <!-- Mini heatmap decorativo (derecha) -->
+  <g transform="translate(760, 120)">
+    <!-- 8 columnas x 7 filas de cuadraditos -->
+    <text x="0" y="-12" font-family="system-ui,sans-serif" font-size="14" fill="#475569">últimos 56 días</text>
+    <!-- fila por fila, colores aleatorios para decorar -->
+    <rect x="0"   y="0"   width="40" height="40" rx="6" fill="#1e3a5f"/>
+    <rect x="48"  y="0"   width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="96"  y="0"   width="40" height="40" rx="6" fill="#1d4ed8"/>
+    <rect x="144" y="0"   width="40" height="40" rx="6" fill="#1e3a5f"/>
+    <rect x="192" y="0"   width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="240" y="0"   width="40" height="40" rx="6" fill="#1e3a5f"/>
+    <rect x="288" y="0"   width="40" height="40" rx="6" fill="#3b82f6"/>
+    <rect x="336" y="0"   width="40" height="40" rx="6" fill="#2563eb"/>
+
+    <rect x="0"   y="48"  width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="48"  y="48"  width="40" height="40" rx="6" fill="#1e3a5f"/>
+    <rect x="96"  y="48"  width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="144" y="48"  width="40" height="40" rx="6" fill="#3b82f6"/>
+    <rect x="192" y="48"  width="40" height="40" rx="6" fill="#1d4ed8"/>
+    <rect x="240" y="48"  width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="288" y="48"  width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="336" y="48"  width="40" height="40" rx="6" fill="#2563eb"/>
+
+    <rect x="0"   y="96"  width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="48"  y="96"  width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="96"  y="96"  width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="144" y="96"  width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="192" y="96"  width="40" height="40" rx="6" fill="#3b82f6"/>
+    <rect x="240" y="96"  width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="288" y="96"  width="40" height="40" rx="6" fill="#1d4ed8"/>
+    <rect x="336" y="96"  width="40" height="40" rx="6" fill="#1e293b"/>
+
+    <rect x="0"   y="144" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="48"  y="144" width="40" height="40" rx="6" fill="#3b82f6"/>
+    <rect x="96"  y="144" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="144" y="144" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="192" y="144" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="240" y="144" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="288" y="144" width="40" height="40" rx="6" fill="#3b82f6"/>
+    <rect x="336" y="144" width="40" height="40" rx="6" fill="#2563eb"/>
+
+    <rect x="0"   y="192" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="48"  y="192" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="96"  y="192" width="40" height="40" rx="6" fill="#1d4ed8"/>
+    <rect x="144" y="192" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="192" y="192" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="240" y="192" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="288" y="192" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="336" y="192" width="40" height="40" rx="6" fill="#3b82f6"/>
+
+    <rect x="0"   y="240" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="48"  y="240" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="96"  y="240" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="144" y="240" width="40" height="40" rx="6" fill="#1d4ed8"/>
+    <rect x="192" y="240" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="240" y="240" width="40" height="40" rx="6" fill="#3b82f6"/>
+    <rect x="288" y="240" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="336" y="240" width="40" height="40" rx="6" fill="#2563eb"/>
+
+    <rect x="0"   y="288" width="40" height="40" rx="6" fill="#1d4ed8"/>
+    <rect x="48"  y="288" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="96"  y="288" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="144" y="288" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="192" y="288" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="240" y="288" width="40" height="40" rx="6" fill="#2563eb"/>
+    <rect x="288" y="288" width="40" height="40" rx="6" fill="#1e293b"/>
+    <rect x="336" y="288" width="40" height="40" rx="6" fill="#3b82f6"/>
+  </g>
+
+  <!-- URL -->
+  <text x="60" y="590" font-family="system-ui,sans-serif" font-size="18" fill="#475569">braiidev.github.io/habit-tracker</text>
+</svg>

@@ -1,33 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habit Tracker</title>
-  <!--
-    Cambiá "/habit-tracker/" por la ruta real donde desplegás la app.
-    Ejemplos:
-      GitHub Pages → /tu-repo/habit-tracker/
-      Dominio raíz → /
-  -->
-  <base href="/habit-tracker/">
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='50%25' y='54%25' font-size='22' font-family='Georgia,serif' fill='white' text-anchor='middle' dominant-baseline='middle'>h</text></svg>">
-  <link rel="stylesheet" href="app/styles.css">
-</head>
 
+  <!-- ══ SEO PRIMARIO ══════════════════════════════════════════════════════ -->
+  <title>Habit Tracker — Seguimiento de hábitos diarios gratis</title>
+  <meta name="description" content="Habit Tracker: app gratuita para seguimiento de hábitos diarios. Registrá tus hábitos, medí tu progreso con estadísticas, rachas y heatmap. Sin anuncios, sin suscripción.">
+  <meta name="keywords" content="habit tracker, seguimiento de hábitos, app de hábitos, tracker de hábitos diarios, hábitos diarios, racha de hábitos, progreso personal, productividad">
+  <meta name="author" content="braiidev">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="es">
+  <meta name="theme-color" content="#2563eb">
+
+  <!--
+    ═══════════════════════════════════════════════════════
+    CAMBIÁ ESTAS DOS LÍNEAS con tu URL real después del deploy:
+      BASE HREF   → /nombre-de-tu-repo/
+      CANONICAL   → https://braiidev.github.io/nombre-de-tu-repo/
+    ═══════════════════════════════════════════════════════
+  -->
+  <!-- <base href="/habit-tracker/"> -->
+  <link rel="canonical" href="https://braiidev.github.io/habit-tracker/">
+
+  <!-- ══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ════════════════════════ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Habit Tracker">
+  <meta property="og:url"         content="https://braiidev.github.io/habit-tracker/">
+  <meta property="og:title"       content="Habit Tracker — Seguimiento de hábitos diarios">
+  <meta property="og:description" content="App gratuita para registrar y medir tus hábitos diarios. Estadísticas, rachas, heatmap de actividad y sincronización entre dispositivos.">
+  <meta property="og:image"       content="https://braiidev.github.io/habit-tracker/og-image.svg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="Habit Tracker — App de seguimiento de hábitos">
+  <meta property="og:locale"      content="es_AR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- ══ TWITTER / X ══════════════════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@braiidev">
+  <meta name="twitter:title"       content="Habit Tracker — Seguimiento de hábitos diarios">
+  <meta name="twitter:description" content="App gratuita para registrar tus hábitos. Estadísticas, rachas y heatmap de actividad.">
+  <meta name="twitter:image"       content="https://braiidev.github.io/habit-tracker/og-image.svg">
+
+  <!-- ══ JSON-LD — datos estructurados para Google ════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Habit Tracker",
+    "alternateName": ["Seguimiento de Hábitos", "Tracker de Hábitos Diarios"],
+    "url": "https://braiidev.github.io/habit-tracker/",
+    "description": "Aplicación gratuita para el seguimiento de hábitos diarios. Registrá tus hábitos, visualizá estadísticas, rachas y heatmap de actividad.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web Browser",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": ["es", "en"],
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Seguimiento de hábitos diarios",
+      "Estadísticas y rachas",
+      "Heatmap de actividad",
+      "Resumen semanal",
+      "Sincronización entre dispositivos",
+      "Modo oscuro",
+      "Sin anuncios"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "braiidev",
+      "url": "https://github.com/braiidev"
+    }
+  }
+  </script>
+
+  <!-- ══ IMPORTMAP — nano framework ═══════════════════════════════════════ -->
+  <script type="importmap">
+  {
+    "imports": {
+      "nano": "https://braiidev.github.io/nano/packages/nano.min.js"
+    }
+  }
+  </script>
+
+  <!-- ══ FAVICON inline SVG ════════════════════════════════════════════════ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='50%25' y='54%25' font-size='22' font-family='Georgia,serif' fill='white' text-anchor='middle' dominant-baseline='middle'>h</text></svg>">
+
+  <!-- ══ PERFORMANCE ═══════════════════════════════════════════════════════ -->
+  <link rel="preload" href="app/styles.css" as="style">
+  <link rel="modulepreload" href="app/main.js">
+  <link rel="stylesheet" href="app/styles.css">
+
+  <!-- ══ ALTERNATE LANGUAGE (hreflang) ════════════════════════════════════
+    Le dice a Google que la app existe en ambos idiomas.
+    Como es una SPA con el mismo contenido, apuntamos a la misma URL.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="alternate" hreflang="es" href="https://braiidev.github.io/habit-tracker/">
+  <link rel="alternate" hreflang="en" href="https://braiidev.github.io/habit-tracker/">
+  <link rel="alternate" hreflang="x-default" href="https://braiidev.github.io/habit-tracker/">
+</head>
 <body>
+  <!--
+    Contenido estático visible para crawlers que no ejecutan JS.
+    Google lo lee antes de renderizar el JavaScript.
+  -->
+  <noscript>
+    <main style="font-family:system-ui,sans-serif;max-width:600px;margin:60px auto;padding:0 24px">
+      <h1 style="font-size:32px;margin-bottom:12px">Habit Tracker</h1>
+      <p style="color:#666;margin-bottom:24px">
+        Aplicación gratuita para el seguimiento de hábitos diarios.
+        Registrá tus hábitos, medí tu progreso con estadísticas, rachas y heatmap de actividad.
+      </p>
+      <ul style="color:#666;line-height:2;padding-left:20px">
+        <li>Seguimiento de hábitos por día de la semana</li>
+        <li>Estadísticas: racha actual, mejor racha, tasa de completado</li>
+        <li>Heatmap de actividad de los últimos 91 días</li>
+        <li>Resumen semanal con comparativa vs semana anterior</li>
+        <li>Sincronización entre dispositivos</li>
+        <li>Modo oscuro · Sin anuncios · Gratis</li>
+      </ul>
+      <p style="margin-top:24px;color:#666">
+        Necesitás JavaScript habilitado para usar la app.
+      </p>
+    </main>
+  </noscript>
+
   <nav id="nav"></nav>
   <main id="root"></main>
-  <script type="importmap">
-{
-  "imports": {
-    "nano": "https://braiidev.github.io/nano/packages/nano.min.js"
-  }
-}
-</script>
   <script type="module" src="app/main.js"></script>
 </body>
-
 </html>

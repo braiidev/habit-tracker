@@ -12,7 +12,8 @@ export const NavBar = defineComponent('NavBar', () => {
     <nav class="navbar">
       <span class="nano-logo" id="logo">habit</span>
       <ul class="nav-links">
-        <li><a href="/"          data-link>Hábitos</a></li>
+        <li><a href="/"          data-link>Hoy</a></li>
+        <li><a href="/stats"     data-link>Stats</a></li>
         <li><a href="/historial" data-link>Historial</a></li>
         <li><a href="/gestionar" data-link>Gestionar</a></li>
         <li>
