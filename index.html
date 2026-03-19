@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <!--
+    base href: le dice al Router dónde vive la app.
+    En GitHub Pages el repo se sirve en /<nombre-del-repo>/habit-tracker/
+    Cambiá "tu-repo" por el nombre exacto de tu repositorio en GitHub.
+    Ej: repo "my-habits" → <base href="/my-habits/habit-tracker/">
+  -->
+  <!-- <base href="/habit-tracker/"> -->
+  <link rel="stylesheet" href="app/styles.css">
+</head>
+
+<body>
+  <nav id="nav"></nav>
+  <main id="root"></main>
+  <script type="importmap">
+{
+  "imports": {
+    "nano": "https://braiidev.github.io/nano/packages/nano.min.js"
+  }
+}
+</script>
+  <script type="module" src="app/main.js"></script>
+</body>
+
+</html>
