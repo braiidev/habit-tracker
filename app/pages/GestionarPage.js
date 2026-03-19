@@ -252,7 +252,7 @@ export const GestionarPage = defineComponent('GestionarPage', () => {
   el.querySelector('.tabla-container').appendChild(tablaEl);
 
   onMount(el, () => {
-    const cleanBack  = onEvent(el.querySelector('#btn-back'),  'click', () => navigate('/habitos'));
+    const cleanBack  = onEvent(el.querySelector('#btn-back'),  'click', () => navigate('/'));
     const cleanNuevo = onEvent(el.querySelector('#btn-nuevo'), 'click', () => openModal(null));
 
     const unsub = habitosStore.subscribe(() => {

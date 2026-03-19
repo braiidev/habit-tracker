@@ -1,7 +1,7 @@
 // habit-tracker/app/components/NavBar.js
 import { defineComponent, html, onMount, onEvent } from 'nano';
 import { tema, toggleTema } from '../theme.js';
-import { authStatus, currentUser, logout } from '../authStore.js';
+import { currentUser, logout } from '../authStore.js';
 import { navigate } from 'nano';
 
 export const NavBar = defineComponent('NavBar', () => {
@@ -12,9 +12,9 @@ export const NavBar = defineComponent('NavBar', () => {
     <nav class="navbar">
       <span class="nano-logo" id="logo">habit</span>
       <ul class="nav-links">
-        <li><a href="/habitos" data-link>Hábitos</a></li>
-        <li><a href="/habitos/historial" data-link>Historial</a></li>
-        <li><a href="/habitos/gestionar" data-link>Gestionar</a></li>
+        <li><a href="/"          data-link>Hábitos</a></li>
+        <li><a href="/historial" data-link>Historial</a></li>
+        <li><a href="/gestionar" data-link>Gestionar</a></li>
         <li>
           <button class="btn-tema" id="btn-tema" title="Cambiar tema">${icono}</button>
         </li>
@@ -31,11 +31,11 @@ export const NavBar = defineComponent('NavBar', () => {
   `;
 
   onMount(el, () => {
-    const btn   = el.querySelector('#btn-tema');
-    const u1    = tema.subscribe(t => { btn.textContent = t === 'dark' ? '☀️' : '🌙'; });
-    const c1    = onEvent(btn, 'click', () => toggleTema());
-    const c2    = onEvent(el.querySelector('#logo'), 'click', () => navigate('/habitos'));
-    const c3    = onEvent(el.querySelector('#btn-logout'), 'click', async () => {
+    const btn = el.querySelector('#btn-tema');
+    const u1  = tema.subscribe(t => { btn.textContent = t === 'dark' ? '☀️' : '🌙'; });
+    const c1  = onEvent(btn, 'click', () => toggleTema());
+    const c2  = onEvent(el.querySelector('#logo'), 'click', () => navigate('/'));
+    const c3  = onEvent(el.querySelector('#btn-logout'), 'click', async () => {
       if (confirm('¿Cerrar sesión?')) await logout();
     });
     return () => { u1(); c1(); c2(); c3(); };

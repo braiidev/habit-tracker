@@ -354,7 +354,7 @@ export const HistorialPage = defineComponent('HistorialPage', () => {
   onMount(el, () => {
     renderMes(); // render inicial
 
-    const cleanBack = onEvent(el.querySelector('#btn-back'), 'click', () => navigate('/habitos'));
+    const cleanBack = onEvent(el.querySelector('#btn-back'), 'click', () => navigate('/'));
 
     const cleanPrev = onEvent(btnPrev, 'click', () => {
       const { year, month } = mesSignal.get();

@@ -45,7 +45,7 @@ function renderLista(habitos) {
       <ul class="habitos-list">
         <li class="habito-empty">
           <span>Sin hábitos para hoy</span>
-          <button class="link-btn" data-goto="/habitos/gestionar">Crear uno →</button>
+          <button class="link-btn" data-goto="/gestionar">Crear uno →</button>
         </li>
       </ul>
     `;
@@ -147,8 +147,8 @@ export const HabitosPage = defineComponent('HabitosPage', () => {
           <h1>Hábitos de hoy</h1>
         </div>
         <div class="habitos-header-actions">
-          <button class="btn-historial" data-goto="/habitos/historial">Historial</button>
-          <button class="btn-gestionar" data-goto="/habitos/gestionar">Gestionar →</button>
+          <button class="btn-historial" data-goto="/historial">Historial</button>
+          <button class="btn-gestionar" data-goto="/gestionar">Gestionar →</button>
         </div>
       </header>
 
@@ -180,7 +180,7 @@ export const HabitosPage = defineComponent('HabitosPage', () => {
       const btn = /** @type {HTMLElement} */(e.target).closest('button[data-id]');
       if (!btn || btn.hasAttribute('disabled')) return;
 
-      const id  = Number(btn.getAttribute('data-id'));
+      const id  = btn.getAttribute('data-id'); // UUID es string, no número
       const ul  = el.querySelector('.habitos-list');
 
       if (ul) {
