@@ -13,9 +13,11 @@ export const NavBar = defineComponent('NavBar', () => {
       <span class="nano-logo" id="logo">habit</span>
       <ul class="nav-links">
         <li><a href="/"          data-link>Hoy</a></li>
+        <!--
         <li><a href="/stats"     data-link>Stats</a></li>
         <li><a href="/historial" data-link>Historial</a></li>
         <li><a href="/gestionar" data-link>Gestionar</a></li>
+        -->
         <li>
           <button class="btn-tema" id="btn-tema" title="Cambiar tema">${icono}</button>
         </li>

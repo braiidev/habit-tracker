@@ -286,6 +286,7 @@ export const HabitosPage = defineComponent('HabitosPage', () => {
           <h1>Hábitos de hoy</h1>
         </div>
         <div class="habitos-header-actions">
+          <button class="btn-historial" data-goto="/stats">Stats</button>
           <button class="btn-historial" data-goto="/historial">Historial</button>
           <button class="btn-gestionar" data-goto="/gestionar">Gestionar →</button>
         </div>
